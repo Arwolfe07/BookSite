@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap');
+
+/* body {
+
+    font-family: 'Charis SIL', serif;
+} */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.all-navprop{
+    font-family: 'Charis SIL', serif;
+}
+
+#navbar {
+    /* overflow: hidden; */
+    height: 80px;
+    /* background: #13282B; */
+    background: #055256;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+}
+
+nav img {
+    width: 150px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px 15px;
+}
+
+.logo{
+    font-size: 30px;
+    color: #fff;
+    display: inline;
+    position: absolute;
+font-weight: 800;
+    top: 17px;
+    left: 10%;
+         
+}
+
+nav ul li a {
+    text-decoration-line: none;
+    position: relative;
+    /* color: #0075a3; */
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px 0;
+    /* text-transform: uppercase; */
+    /* display: block; */
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    /* background-color: #0075a3; */
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s linear;
+}
+
+nav ul li a:hover:before {
+
+    transform: scaleX(1);
+    transform-origin: left;
+    /* color: #0075a3; */
+    color: #fff;
+}
+
+label #btn,
+label #cancel {
+    /* color: #0075a3; */
+    color: #fff;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1118px) {
+    nav img {
+
+        left: 8%;
+    }
+}
+
+@media (max-width: 944px) {
+    nav img {
+
+        left: 6%;
+        top: 20px;
+        width: 130px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 860px) {
+    label #btn {
+        display: block;
+    }
+
+    #navbar{
+        position: fixed;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        /* background: #fff; */
+        background: rgba(255, 255, 255, 0.8);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: #055256;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    #check:checked~label #btn {
+        display: none;
+    }
+
+    #check:checked~label #cancel {
+        display: block;
+    }
+}

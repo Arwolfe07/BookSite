@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&family=Nunito:wght@200;300;400;500;600&family=Poppins:wght@100&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #e9f8f9;
+}
+
+/* 
+.all-container{
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    background: #eee;
+} */
+
+.all-container{
+    background: #eefbfc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container .title {
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.container .book-container .book {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .book-container .book:hover {
+    outline: .2rem solid #ccc;
+    outline-offset: 0;
+}
+
+.container .book-container .book img {
+    height: 25rem;
+    width: 25rem;
+}
+
+.container .book-container .book:hover img {
+    transform: scale(0.9);
+}
+
+.container .book-container .book h3 {
+    padding: 5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .book-container .book:hover h3 {
+    color: #27ae60;
+}
+
+.books-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.books-preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    width: 40rem;
+    margin: 2rem;
+    position: relative;
+}
+
+.books-preview .preview.active {
+    display: inline-block;
+}
+
+.books-preview .preview img {
+    height: 30rem;
+    width: 30rem;
+}
+
+.books-preview .preview .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 4rem;
+}
+
+.books-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+}
+
+.books-preview .preview h3 {
+    color: #444;
+    padding: 5rem 0;
+    font-size: 2.5rem;
+}
+.books-preview .preview p {
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #777;
+}
+
+.books-preview .preview .buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.books-preview .preview .buttons button {
+    text-decoration: none;
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+    border: .1rem solid #444;
+}
+
+.books-preview .preview .buttons a {
+    text-decoration: none;
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+    border: .1rem solid #444;
+}
+
+.books-preview .preview .buttons .delete{
+    background: #444;
+    color: #fff;
+}
+
+.books-preview .preview .buttons .delete:hover {
+    background-color: #111;
+    cursor: pointer;
+}
+
+.books-preview .preview .buttons a.edit:hover {
+    background: #444;
+    color: #fff;
+}
+
+.books-preview .preview .buttons a.download:hover {
+    background: #444;
+    color: #fff;
+}
+
+
+

@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate') %>
+    <div>
+        <div class="wrapper">
+            <h1>Sign Up</h1>
+            <form class="sign-up" action="/register" method="POST" novalidate>
+                <div class="input-control">
+                    <input id="sign-user" type="text" placeholder="Username" name="username">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="sign-email" type="email" placeholder="Email" name="email">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="sign-pass" type="password" placeholder="Password" name="password">
+                    <div class="error"></div>
+                </div>
+                <div>
+                    <button type="submit" class="sign-sub">Sign Up</button>
+                </div>
+
+            </form>
+            <div class="member">
+                Already Registered? <a href="/login">Login Here</a>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,23 @@
+<div class="all-navprop">
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa-solid fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+
+        
+        <li class="logo">WolfeChemE</li>
+        <ul id="nav_ul">
+            <li><a class="nav-link" href="/">Home</a></li>
+            <li><a href="/books">Books</a></li>
+            <li><a href="/books/new">New</a></li>
+            <% if(!currentUser){%>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+                <% } else { %>
+                <li><a href="/logout">Logout</a></li>
+                <% } %>
+        </ul>
+    </nav>
+</div>

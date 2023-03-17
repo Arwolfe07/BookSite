@@ -1,0 +1,23 @@
+<div class="msg-body">
+
+    <% if(success && success.length) {%>
+    <div class="alert-suc cus show">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg"><%= success %></span>
+        <span class="close-btn">
+            <span class="fas fa-times cross"></span>
+        </span>
+    </div>
+    <% } %>
+    
+    <% if(error && error.length) {%>
+    <div class="alert-err cus show">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg"><%= error %></span>
+        <span class="close-btn">
+            <span class="fas fa-times cross"></span>
+        </span>
+    </div>
+    <% } %>
+
+</div>

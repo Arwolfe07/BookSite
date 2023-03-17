@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+<body>
+    <div class="cover-container">
+        <div class="nav">
+            <h3>WolfeChemE</h3>
+            <div class="navbar">
+
+                <a href="/books" class="nav-link">Books</a>
+                <% if(!currentUser) { %>
+                <a href="/login" class="nav-link">Login</a>
+                <a href="/register" class="nav-link">Register</a>
+                <% } else { %>
+                <a href="/logout" class="nav-link">Logout</a>
+                <% } %>
+            </div>
+
+        </div>
+        <div class="para">
+            <h1>WolfeChemE</h1>
+            <p class="p1">Welcome to WolfeChemE!<br> Check Out the new books for Chemical Engineers and
+                download them to your devices!
+            </p>
+            <a href="/books" class="btn">Check Books</a>
+        </div>
+    </div>
+</body>
+</html>

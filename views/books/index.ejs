@@ -1,0 +1,45 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <div class="all-container">
+
+        <div class="container">
+            <h3 class="title">All Books</h3>
+            <div class="book-container">
+                <% for(let book of books) {%>
+                    <div class="book" data-name="<%= book._id %>">
+                        <img src="<%= book.image.url %>" alt="">
+                        <h3>
+                            <%= book.name %>
+                        </h3>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div class="books-preview">
+        <% for(let book of books) { %>
+            <div class="preview" data-target="<%= book._id %>">
+                <i class="fa fa-times"></i>
+                <img src="<%=book.image.url%>" alt="">
+                <h3>
+                    <%= book.name %>
+                </h3>
+                <p>
+                    <%= book.description %>
+                </p>
+                <div class="buttons">
+                    <% if(currentUser) {%>
+                        <% if(currentUser.username===process.env.ADMIN) { %>
+                            <a href="/books/<%= book._id %>/edit" class="edit">Edit</a>
+                            <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
+                                <button class="delete">Delete</button>
+                            </form>
+                            <% } %>
+                                <a href="<%=book.file.url%>" class="download" download="<%=book.name%>">Download</a>
+                                <% } %>
+                </div>
+            </div>
+            <% } %>
+    </div>
